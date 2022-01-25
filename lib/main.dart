@@ -1,10 +1,14 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:grocery/bottom_nav_bar/bottom_nav_bar.dart';
+import 'package:grocery/screens/home.dart';
 import 'package:grocery/screens/otp_verification.dart';
 import 'package:grocery/screens/phone_number.dart';
 import 'package:grocery/screens/registration.dart';
 import 'package:grocery/screens/splash_screen.dart';
+
+import 'screens/password .dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,6 +33,9 @@ class MyApp extends StatelessWidget {
        '/phoneNumber':(context)=>const PhoneNumber(),
        '/otpscreen':(context)=>const OtpScreen(),
        '/registration':(context)=>const Registration(),
+       '/password':(context)=>const Password(),
+       '/home':(context)=>const Home(),
+       '/bottomNavBar':(context)=>const BottomNavBar(),
      },
     );
   }
