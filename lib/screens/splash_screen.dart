@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
 Future<void>gotoLogin()async{
   await Future.delayed(const Duration(seconds: 3));
-  Navigator.of(context).push( MaterialPageRoute(builder: (context)=>PhoneNumber()));
+  Navigator.of(context).push( MaterialPageRoute(builder: (context)=>const PhoneNumber()));
 }
 
 
@@ -32,7 +32,7 @@ Future<void>gotoLogin()async{
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              height: 100,
+              height: 150,
               width: 100,
               decoration:const BoxDecoration(
                 image: DecorationImage(image: AssetImage("assets/images/logo.png"),

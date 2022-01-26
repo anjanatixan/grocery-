@@ -34,7 +34,7 @@ Widget mainButton({
              alignment: Alignment.center,
              padding: const EdgeInsets.only(left: 10,right:10,top: 15,bottom: 15),
              width: MediaQuery.of(context).size.width -20,
-             child: Text("Next",style: TextStyle(
+             child:const Text("Next",style: TextStyle(
                letterSpacing: 1,fontSize: 16,fontFamily: "Poppins",color: Colors.white)
              ),),
            ),

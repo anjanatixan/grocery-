@@ -8,6 +8,8 @@ class Password extends StatefulWidget {
 }
 
 class _PasswordState extends State<Password> {
+  final _passwordController=TextEditingController();
+  final _confirmController=TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,21 +29,22 @@ class _PasswordState extends State<Password> {
             padding: const EdgeInsets.all(12),
             child: SingleChildScrollView(
               child: Container(
-                margin: EdgeInsets.all(10),
+                margin:const EdgeInsets.all(10),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("For the security & safety please choose a password",style: TextStyle(fontSize:15,fontFamily: "Poppins")),
-                      SizedBox(height: 20,),
+                    const Text("For the security & safety please choose a password",style: TextStyle(fontSize:15,fontFamily: "Poppins")),
+                     const SizedBox(height: 20,),
                       Padding(
-                        padding: EdgeInsets.all(30),
+                        padding:const EdgeInsets.all(30),
                         child: Image.asset("assets/images/Mobile login.png"),
                       ),
-                      SizedBox(height: 5,),
+                    const SizedBox(height: 5,),
                       TextFormField(
+                          controller: _passwordController,
                         obscureText: true,
                          decoration: InputDecoration(
                           border: OutlineInputBorder(
@@ -49,14 +52,15 @@ class _PasswordState extends State<Password> {
                           borderSide: BorderSide.none
                           ),
                           filled: true,
-                          fillColor: Color(0xFFe7edeb),
-                          suffixIcon: Icon(Icons.visibility),
-                          prefixIcon: Icon(Icons.lock_outline),
-                          hintText: "Password",hintStyle: TextStyle(fontFamily: 'Poppins',),
+                          fillColor:const Color(0xFFe7edeb),
+                          suffixIcon:const Icon(Icons.visibility),
+                          prefixIcon:const Icon(Icons.lock_outline),
+                          hintText: "Password",hintStyle:const TextStyle(fontFamily: 'Poppins',),
                            ),
                        ),
-                       SizedBox(height: 10,),
+                      const SizedBox(height: 10,),
                       TextFormField(
+                        controller: _confirmController,
                         obscureText: true,
                          decoration: InputDecoration(
                           border: OutlineInputBorder(
@@ -64,20 +68,20 @@ class _PasswordState extends State<Password> {
                           borderSide: BorderSide.none
                           ),
                           filled: true,
-                          fillColor: Color(0xFFe7edeb),
-                          suffixIcon: Icon(Icons.visibility),
-                          prefixIcon: Icon(Icons.lock_outline),
-                          hintText: "Confirm Password",hintStyle: TextStyle(fontFamily: 'Poppins',),
+                          fillColor:const Color(0xFFe7edeb),
+                          suffixIcon:const Icon(Icons.visibility),
+                          prefixIcon:const Icon(Icons.lock_outline),
+                          hintText: "Confirm Password",hintStyle:const TextStyle(fontFamily: 'Poppins',),
                            ),
                        ),
-                       SizedBox(height: 10,),
-            
+                      const SizedBox(height: 10,),
+                            
                        SizedBox(
                             height: 50,
                             width: 400,
                             child: ElevatedButton(onPressed: (){
-                              Navigator.pushNamed(context, '/bottomNavBar');
-                            }, child: Text("Finish, Good to go"),
+                                 checkLoggin();
+                            }, child:const Text("Finish, Good to go",style:TextStyle(fontFamily: 'Poppins',)),
                             style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),),
                           ),
                     ],
@@ -92,4 +96,19 @@ class _PasswordState extends State<Password> {
       
     );
   }
+void checkLoggin(){
+    final _password= _passwordController.text;
+    final _confirm=_confirmController.text;
+    if(_password==_confirm){
+        
+        Navigator.pushNamed(context, '/bottomNavBar');
+    }else{
+       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        behavior: SnackBarBehavior.floating,
+        margin: EdgeInsets.all(20),backgroundColor: Colors.white,
+        content: Text('password doesnot match',style: TextStyle(color: Colors.black),)));
+      
+    }
+ 
+}
 }

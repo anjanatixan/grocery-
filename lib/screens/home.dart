@@ -39,12 +39,12 @@ class _HomeState extends State<Home> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Container(
-                      decoration: BoxDecoration(
+                      decoration:const BoxDecoration(
                       shape:BoxShape.circle ,color: Colors.blue,),
-                      child: IconButton(onPressed: (){}, icon: Icon(Icons.location_on_outlined,color: Colors.white,),
+                      child: IconButton(onPressed: (){}, icon: const Icon(Icons.location_on_outlined,color: Colors.white,),
                      iconSize: 20.0,),
                     ),
-                 SizedBox(width: 15),
+                 const SizedBox (width: 15),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children:const [
@@ -55,7 +55,7 @@ class _HomeState extends State<Home> {
                ),
             ),
             Container(
-              margin: EdgeInsets.all(12),
+              margin:const EdgeInsets.all(12),
               child: TextField(
                 decoration: InputDecoration(
                           border: OutlineInputBorder(
@@ -64,13 +64,13 @@ class _HomeState extends State<Home> {
                           ),
                           filled: true,
                           fillColor: Colors.white70,
-                          prefixIcon: Icon(Icons.search,color: Colors.black),
+                          prefixIcon:const Icon(Icons.search,color: Colors.black),
                           hintText: "Search Anything",hintStyle: TextStyle(fontFamily: 'Poppins',),
                            ),
               ),
             ),
 
-            Expanded(child: GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            Expanded(child: GridView.builder(gridDelegate:const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               mainAxisSpacing: 0,
               crossAxisSpacing: 1), 
@@ -91,7 +91,7 @@ class _HomeState extends State<Home> {
                          //padding: EdgeInsets.all(5),
                           alignment: Alignment.bottomCenter,
                           decoration: BoxDecoration(
-                            boxShadow: [
+                            boxShadow:const [
                               BoxShadow(
                                 color: Colors.white,
                               )

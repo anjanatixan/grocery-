@@ -1,5 +1,4 @@
-
-
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery/bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:grocery/screens/home.dart';
@@ -10,7 +9,9 @@ import 'package:grocery/screens/splash_screen.dart';
 
 import 'screens/password .dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
      routes: {
        '/splash':(context)=>const SplashScreen(),
        '/phoneNumber':(context)=>const PhoneNumber(),
-       '/otpscreen':(context)=>const OtpScreen(),
+       '/otpscreen':(context)=>const OtpScreen(phoneNumber: "123",),
        '/registration':(context)=>const Registration(),
        '/password':(context)=>const Password(),
        '/home':(context)=>const Home(),

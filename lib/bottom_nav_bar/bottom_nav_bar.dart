@@ -1,6 +1,10 @@
+
 import 'package:flutter/material.dart';
+import 'package:grocery/screens/card_screen.dart';
+import 'package:grocery/screens/category_screen.dart';
 import 'package:grocery/screens/home.dart';
-import 'package:grocery/screens/password%20.dart';
+import 'package:grocery/screens/menu_screen.dart';
+
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({ Key? key }) : super(key: key);
@@ -13,7 +17,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
    int _selectedIndex = 0;
      static const List<Widget> screens = [
        Home(),
-       Password(),
+       CategoryScreen(),
+       CardScreen(),
+       MenuScreen(),
       
   ];
   void _onItemTapped(int index) {
@@ -67,18 +73,18 @@ bottomNavigationBar: SizedBox(height: 75,
                     backgroundColor: Colors.white38
                     ),
                       BottomNavigationBarItem(
-                     icon: Icon(Icons.view_list_rounded),
-                     title: Text('Orders'),
+                     icon: Icon(Icons.category_outlined),
+                     title: Text('Category'),
                      backgroundColor: Colors.white38
                      ),
                       BottomNavigationBarItem(
-                        icon: Icon(Icons.category),
-                        title: Text('Products'),
+                        icon: Icon(Icons.shopping_bag_outlined),
+                        title: Text('Card'),
                         backgroundColor: Colors.white38
                         ),
                       BottomNavigationBarItem(
-                      icon: Icon(Icons.person),
-                      title: Text('Profile'),
+                      icon: Icon(Icons.menu),
+                      title: Text('Menu'),
                       backgroundColor: Colors.white38,
                         ),
                         ],
