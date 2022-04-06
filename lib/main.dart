@@ -18,27 +18,26 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        
         primarySwatch: Colors.blue,
       ),
-     home: const SplashScreen(),
-    // initialRoute: '/splash',
-     routes: {
-       '/splash':(context)=>const SplashScreen(),
-       '/phoneNumber':(context)=>const PhoneNumber(),
-       '/otpscreen':(context)=>const OtpScreen(phoneNumber: "123",),
-       '/registration':(context)=>const Registration(),
-       '/password':(context)=>const Password(),
-       '/home':(context)=>const Home(),
-       '/bottomNavBar':(context)=>const BottomNavBar(),
-     },
+      home: const SplashScreen(),
+      // initialRoute: '/splash',
+      routes: {
+        '/splash': (context) => const SplashScreen(),
+        '/phoneNumber': (context) => const PhoneNumber(),
+        '/otpscreen': (context) => const OtpScreen(
+              phone: "123",
+            ),
+        '/registration': (context) => const Registration(),
+        '/password': (context) => const Password(),
+        '/home': (context) => const Home(),
+        '/bottomNavBar': (context) => const BottomNavBar(),
+      },
     );
   }
 }
-

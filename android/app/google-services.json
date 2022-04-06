@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "614526981708",
-    "project_id": "qi-atecom",
-    "storage_bucket": "qi-atecom.appspot.com"
+    "project_number": "309190760388",
+    "project_id": "grocery-319c0",
+    "storage_bucket": "grocery-319c0.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:614526981708:android:57fce0b8aa1674ee61c6e9",
+        "mobilesdk_app_id": "1:309190760388:android:75d87204c4a0e0dda03691",
         "android_client_info": {
           "package_name": "com.example.grocery"
         }
       },
       "oauth_client": [
         {
-          "client_id": "614526981708-his6f3dvor0p50vnlq6q1jj38f3pfhep.apps.googleusercontent.com",
+          "client_id": "309190760388-0rej0mip7lpnpi8g5ulh5vl49ajl9d8k.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAccnNQN-yiQ1uF8aiLsek5rqCho2AQXzs"
+          "current_key": "AIzaSyAEkjKziVqLbf7wqeLjMFLx7QteQTbxxO8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "614526981708-his6f3dvor0p50vnlq6q1jj38f3pfhep.apps.googleusercontent.com",
+              "client_id": "309190760388-0rej0mip7lpnpi8g5ulh5vl49ajl9d8k.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
